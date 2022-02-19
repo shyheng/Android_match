@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.ui1.R;
+import com.example.ui1.tool.Net;
 import com.example.ui1.ui.inde.IndexActivity;
 
 public class BlankFragment2 extends Fragment {
@@ -47,7 +48,8 @@ public class BlankFragment2 extends Fragment {
                 builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String s = editText.getText().toString();
+                        editText.setText("http://124.93.196.45:10001/");
+                        Net.ip = editText.getText().toString();
                     }
                 });
                 builder.show();
