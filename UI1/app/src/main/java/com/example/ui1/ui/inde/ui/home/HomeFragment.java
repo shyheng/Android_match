@@ -36,7 +36,6 @@ public class HomeFragment extends Fragment {
         Net.netAIP.rot("2").enqueue(new Net<NetAIP.Rot>() {
             @Override
             public void onResponse(Call<NetAIP.Rot> call, Response<NetAIP.Rot> response) {
-
                 ban.setImages(response.body().rows);
             }
         });
